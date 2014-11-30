@@ -28,13 +28,14 @@ public class home extends FragmentActivity {
 	private int currIndex;// current index
 	private int bmpW;// width
 	private int offset;//
-	private double lat = GPSfunction.getLatitude(); //call GPSfunction to get the value of latitude
-	private double lng = GPSfunction.getLongitude();//call GPSfunction to get the value of longitude
+	private double lat; 
+	private double lng; 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home);
-
+lat = GPSfunction.getLatitude(); //call GPSfunction to get the value of latitude
+lng = GPSfunction.getLongitude();//call GPSfunction to get the value of longitude
 		InitTextView();
 		InitImage();
 		InitViewPager();
